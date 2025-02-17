@@ -47,5 +47,5 @@ print(b.getPickupPolicy())
 print(b)
 
 #defined HighSchool class inheriting from School class with 3 attributes and 1 method
-print(c)
+
 
