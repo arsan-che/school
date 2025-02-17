@@ -26,4 +26,26 @@ print(a.getName())
 print(a.getLevel())
 a.setNumberOfStudents(200)
 print(a.getNumberOfStudents())
+
 #defined PrimarySchool class inheriting from School class with 3 attributes and 1 method
+class PrimarySchool(School):
+  def __init__(self, name, numberOfStudents, pickupPolicy):
+    self.name = name
+    self.numberOfStudents = numberOfStudents
+    self.pickupPolicy = pickupPolicy
+    super().__init__(name, 'primary', numberOfStudents)
+#getters
+  def getPickupPolicy(self):
+    return self.pickupPolicy
+  
+  def __repr__(self):
+    parentRepr = super().__repr__()
+    return parentRepr + " The pickup policy is: {pickupPolicy}".format(pickupPolicy = self.pickupPolicy)
+
+b = PrimarySchool('44', 33, '"with parents only".')
+print(b.getPickupPolicy())
+print(b)
+
+#defined HighSchool class inheriting from School class with 3 attributes and 1 method
+print(c)
+
